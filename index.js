@@ -38,5 +38,6 @@ const server = http.createServer(function(req, res) {
     res.end("PAGE NOT FOUND 404");
   }
 });
-server.listen(3000);
-console.log("Server has started at 3000");
+var port = process.env.PORT || 80;
+server.listen(port);
+console.log("Server has started at: " + port);
